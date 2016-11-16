@@ -11,6 +11,23 @@ body{
 	font-family: 'Montserrat';
 	font-size: 1.5em;
 }
+#notification{
+	display: none;
+	color: white;
+	text-align: center;
+	border: 2px solid black;
+	padding: 5px;
+	margin-top: 15px;
+	display: none;
+}
+#notification.error{
+	color: red;
+	border-color: red;
+}
+#notification.success{
+	color:@colorGreen;
+	border-color: @colorGreen;
+}
 header{
 	overflow: hidden;
 	h1{
@@ -262,6 +279,11 @@ header{
     					background-color: white;
     				}
     			}
+    		}
+    		&:after{
+    			content:"";
+    			display: table;
+    			clear: both;
     		}
     	}
     }

@@ -1,7 +1,7 @@
 <?php include('./header.php'); ?>
 	<header id="home">
 		<section id="video-container">
-			<video  src="./videos/bg1.webm" type="video/webm" autoplay="true" loop="true"></video>
+			<video  src="./videos/bg1.webm" type="video/webm" autoplay="true" loop="true" muted></video>
 		</section>
 		<nav class="navbar navbar-default navbar-fixed-top clearfix">
 			<div class="container">
@@ -26,7 +26,7 @@
 				</div>
 			</div>
 		</nav>
-		<h1>De grandes responsabilités impliquent de grands pouvoirs.</h1>
+		<h1>De grandes responsabilités <br>impliquent <br>de grands pouvoirs.</h1>
 	</header>
 	<main>
 		<div class="container">
@@ -64,7 +64,7 @@
 			</section>
 			<section class="row" id="battle-energie">
 				<div class="col-md-12">
-					<h2>LA BATTLE ÉNERGIE</h2>
+					<h2>LE BATTLE ÉNERGIE</h2>
 					<div class="content-battle">
 						<div class="col-md-6 col-sm-12">
 							<h3>Un projet en commun pour réduire les consommations d'énergie</h3>
@@ -121,27 +121,16 @@
 					<h2>Le défi</h2>
 					<div class="content-defi">
 						<div class="col-md-6 col-sm-12">
-							<h3>Un projet en commun pour réduire les consommations d'énergie</h3>
+							<h3>Un défi entre chaque étages</h3>
 							<p>
-								Le mois de décembre arrive, le froid commence à s’installer.
-								 C’est aussi un des mois où la consommation d’énergie dans l’ensemble des bâtiments est la
-								plus importante.
-								E-Green et le collectif le Sentier se mobilisent pour lutter contre le gaspillage énergétique.
-								Selon de nombreuses études, Il faut 21 jours pour passer le premier palier de la création d’une
-								habitude. Une occasion ludique et décalée pour découvrir des micro-gestes du quotidien et
-								d’adopter de nouvelles habitudes plus durables et respectueuses de l’environnement.
+								Le Défi a lieu entre les étages afin de stimuler la compétition. Les consommations globales de chaque étage sont mesurées en tant réel. Un capteur sera installé à chacun des étages. 
+
 							</p>
 						</div>
 						<div class="col-md-6 col-sm-12">
-							<h3>Un projet en commun pour réduire les consommations d'énergie</h3>
+							<h3>Un challenge proposé aux participants</h3>
 							<p>
-								Le mois de décembre arrive, le froid commence à s’installer.
-								 C’est aussi un des mois où la consommation d’énergie dans l’ensemble des bâtiments est la
-								plus importante.
-								E-Green et le collectif le Sentier se mobilisent pour lutter contre le gaspillage énergétique.
-								Selon de nombreuses études, Il faut 21 jours pour passer le premier palier de la création d’une
-								habitude. Une occasion ludique et décalée pour découvrir des micro-gestes du quotidien et
-								d’adopter de nouvelles habitudes plus durables et respectueuses de l’environnement.
+								Consommer le moins d’énergie possible et adopter des modes de consommation plus durables. Un classement est proposé chaque semaine, des points sont attribués en fonction du classement, et l’étage qui gagne le plus de points sur les 3 semaines de challenge remporte un lot à définir avec les lieux !
 							</p>	
 						</div>
 					</div>
@@ -153,13 +142,14 @@
 				<section class="row">
 					<div class="col-md-12" id="newsletter">
 						<h2>T'INSCRIRE À NOTRE NEWSLETTER, CA TE DIT ?</h2>
-						<form class="subscribe-form col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2" method="POST" action="#">
+						<form class="subscribe-form col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2" method="POST">
 							<div class="input-group">
 								<input type="email" class="form-control" id="mc-email" placeholder="Email..." name="email" required><!--
 								whitespace--><span class="input-group-btn">
-									<button class="btn btn-main btn-lg" type="submit">Je m'inscrit !</button>
+									<button class="btn btn-main btn-lg" type="submit">Je m'inscris !</button>
 								</span>
 							</div>
+							<div id="notification"></div>
 						</form>
 					</div>
 				</section>

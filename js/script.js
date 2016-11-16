@@ -56,10 +56,52 @@ $(document).ready(function(){
 		var self = {};
 		self.form = $('.subscribe-form');
 		self.init = function(){
-			
+			self.sendData();
+		}
+		self.sendData = function(){
+			self.form.submit(function(e){
+				var email = self.form.find('#mc-email').val();
+				$.post('./back/data.php',{
+						data: email
+					}, function(data){
+						if(data == "mail_already_exist"){
+							notificationsManager.notifcationsDisplayer("error", $('#notification'), 'L\'email a déjà été renseigné');
+						}
+						else if(data == "mail_inserted"){
+							notificationsManager.notifcationsDisplayer("success", $('#notification'), 'Votre email a bien été enregistré');
+						}
+						else{
+							notificationsManager.notifcationsDisplayer("error", $('#notification'), "Une erreur inconnue est survenue");
+						}
+					}
+				)
+				return false;
+			});
 		}
 		return self;
 	})();
 	formManager.init();
 
+	var notificationsManager = (function(){
+		var self = {};
+		self.init = function(){
+		}
+		self.notifcationsDisplayer = function(type, id, message){
+			id.removeClass('error, success');
+			switch(type) {
+			    case "error":
+			    	id.html(message);
+			    	id.addClass('error');
+			        id.show();
+			        break;
+			    case "success":
+			        id.html(message);
+			        id.addClass('success');
+			        id.show();
+			        break;
+			}
+		}
+		return self;
+	})();
+	notificationsManager.init();
 });
