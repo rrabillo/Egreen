@@ -301,3 +301,47 @@ header{
 		text-align: center;
 	}
 }
+
+@media screen and (max-width:767px){
+	#newsletter-container{
+		#newsletter{
+			.subscribe-form{
+				.input-group-btn{
+					display: block;
+					width: 60%;
+					margin: 0 auto;
+					margin-top: 5px;
+					button{
+						border-radius:4px 4px 4px 4px;	
+					}
+					
+				}
+				#mc-email{
+					display: block;
+					margin: 0 auto;
+					border-radius:4px 4px 4px 4px;
+				}		
+			}	
+		}
+	}
+	.navbar-default, .navbar-default.fixed {
+		.navbar-toggle{
+			margin-top: 16px;
+			border:0px;
+			.icon-bar{
+				background-color: @colorGreen;
+			}
+		}
+		.navbar-collapse{
+			background-color: black;
+			.navbar-nav{
+				li{
+					a{
+						padding: 10px 10px;
+					}
+				}
+			}
+		}
+	}
+	  
+}

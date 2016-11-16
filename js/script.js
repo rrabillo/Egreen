@@ -9,6 +9,7 @@ $(document).ready(function(){
 	    	self.fixedNavigation();
 	    	self.anchorScroll();
 	    	self.linkColor();
+	    	self.menuResponsive();
 	    }
 	    self.fixedNavigation = function(){
 	    	$(window).scroll(function(){
@@ -47,6 +48,14 @@ $(document).ready(function(){
 	    			}
 	    		})
 	    	});
+	    }
+	    self.menuResponsive = function(){
+	    	if(window.matchMedia('max-width:767px')){
+	    		$('.nav a').on('click', function(){
+				    $('.btn-navbar').click(); //bootstrap 2.x
+				    $('.navbar-toggle').click() //bootstrap 3.x by Richard
+				});
+	    	}
 	    }
 	    return self;
 	})();
