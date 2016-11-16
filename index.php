@@ -1,5 +1,5 @@
 <?php include('./header.php'); ?>
-	<header>
+	<header id="home">
 		<section id="video-container">
 			<video  src="./videos/bg1.webm" type="video/webm" autoplay="true" loop="true"></video>
 		</section>
@@ -12,20 +12,21 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="#"><img src="./imgs/egreen_logo.png" alt="logo E-Green" class="img-responsive"></a>
+					<a class="navbar-brand" href="#home"><img src="./imgs/egreen_logo.png" alt="logo E-Green" class="img-responsive"></a>
 				</div>
 				<div class="navbar-collapse main-nav collapse" id="sept-main-nav" aria-expanded="false" style="height: 0px;">
 					<ul class="nav navbar-nav navbar-right">
-						<li class="active"><a href="#home">Home</a></li>
-						<li><a href="#about">E-Green</a></li>
-						<li><a href="#service">La battle énergie</a></li>
-						<li><a href="#portfolio">Newsletter</a></li>
-						<li><a href="#pricing">Ils ont joué le jeu</a></li>
+						<li><a href="#home">Home</a></li>
+						<li><a href="#e-green-intro">E-Green</a></li>
+						<li><a href="#battle-energie">La battle énergie</a></li>
+						<li><a href="#le-defi">Le défi</a></li>
+						<li><a href="#newsletter-container">Newsletter</a></li>
+						<li><a href="#le-jeu">Ils ont joué le jeu</a></li>
 					</ul>
-				</div><!-- /.navbar-collapse -->
+				</div>
 			</div>
 		</nav>
-		<h1>LUTTONS CONTRE LE GASPILLAGE ÉNERGÉTIQUE</h1>
+		<h1>De grandes responsabilités impliquent de grands pouvoirs.</h1>
 	</header>
 	<main>
 		<div class="container">
@@ -144,6 +145,47 @@
 							</p>	
 						</div>
 					</div>
+				</div>
+			</section>
+		</div>
+		<div class="container-fluid" id="newsletter-container">
+			<div class="container">
+				<section class="row">
+					<div class="col-md-12" id="newsletter">
+						<h2>T'INSCRIRE À NOTRE NEWSLETTER, CA TE DIT ?</h2>
+						<form class="subscribe-form col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2" method="POST" action="#">
+							<div class="input-group">
+								<input type="email" class="form-control" id="mc-email" placeholder="Email..." name="email" required><!--
+								whitespace--><span class="input-group-btn">
+									<button class="btn btn-main btn-lg" type="submit">Je m'inscrit !</button>
+								</span>
+							</div>
+						</form>
+					</div>
+				</section>
+			</div>
+		</div>
+		<div class="container">
+			<section class="row" id="le-jeu">
+				<div class="col-md-12">
+					<h2>Ils ont joué le jeu</h2>
+					<div class="col-md-3 col-sm-12 partner">
+						<img src="./imgs/logos/logo-Cerise.png" alt="Logo Cerise">
+						<h3>Cerise</h3>
+					</div>
+					<div class="col-md-3 col-sm-12 partner">
+						<img src="./imgs/logos/logo-insa.png" alt="Logo INSA">
+						<h3>INSA</h3>
+					</div>
+					<div class="col-md-3 col-sm-12 partner">
+						<img src="./imgs/logos/logo-paillasse.png" alt="Logo Paillasse">
+						<h3>La Paillasse</h3>
+					</div>
+					<div class="col-md-3 col-sm-12 partner">
+						<img src="./imgs/logos/logo-schoolab.png" alt="Logo Schoolab">
+						<h3>Schoolab</h3>
+					</div>
+
 				</div>
 			</section>
 		</div>

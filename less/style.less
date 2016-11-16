@@ -1,4 +1,11 @@
 @colorGreen: #1FA02E;
+.transitionsMenu{
+	-webkit-transition: all 0.3s ease-in;
+	-moz-transition: all 0.3s ease-in;
+	-ms-transition: all 0.3s ease-in;
+	-o-transition: all 0.3s ease-in;
+	transition: all 0.3s ease-in;
+}
 body{
 	background-color: #eeeeee;
 	font-family: 'Montserrat';
@@ -6,26 +13,35 @@ body{
 }
 header{
 	overflow: hidden;
+	h1{
+		text-transform: uppercase;
+	}
 	.navbar-default{
 		background-color: transparent;
 		border-bottom: 0;
+		.transitionsMenu;
 		.navbar-nav{
 			> .active{
 				> a{
 					background-color: transparent;
 					color: @colorGreen;
 					&:hover, &:focus{
+						color: @colorGreen;
 						background-color: transparent;
 					}
 				}
 			}
 			li{
 				a{
+					.transitionsMenu;
 					font-size: 1em;
 					color: white;
 					padding: 45px 10px;
 					&:hover{
 						color:@colorGreen; 
+					}
+					&:focus{
+						color: white;
 					}
 				}
 			}
@@ -33,6 +49,11 @@ header{
 	}
 	.navbar-brand{
 		height: auto;
+		.transitionsMenu;
+		img{
+			height: 90px;
+			.transitionsMenu;
+		}
 	}
 	#video-container{
 		width: 100vw;
@@ -73,6 +94,22 @@ header{
 		transform:translateX(-50%) translateY(-50%);
 		z-index: 6;
 		width: auto;
+	}
+	.navbar-default.fixed{
+		background-color: black;
+		.navbar-brand{
+			padding: 12px 15px;
+			img{
+				height: 44px;
+			}
+		}
+		.navbar-nav{
+			li{
+				a{
+					padding: 25px 10px;
+				}
+			}
+		}
 	}
 }
 #e-green-intro{
@@ -168,5 +205,77 @@ header{
 			display: table;
 			clear:both;
 		}
+	}
+}
+#newsletter-container{
+	margin-top: 50px;
+	min-height: 60vh;
+	background-image: url('../imgs/bg-subscribe.png');
+	background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-color: #000;
+    #newsletter{
+    	margin-top: 25vh;
+    	h2{
+    		color: white;
+    		text-align: center;
+    		margin-top: 0;
+    	}
+    	.subscribe-form{
+    		white-space: nowrap;
+    		margin-top: 15px;
+    		#mc-email{
+    			display: inline-block;
+    			width: 70%;
+    			border-radius: 4px 0px 0px 4px;
+    			height: auto;
+    			border: 0px;
+    			font-size: 1em;
+    		}
+    		.input-group-btn{
+    			display: inline-block;
+    			width: 30%;
+    			button{
+    				background-color: @colorGreen;
+    				color: white;
+    				width: 100%;
+    				line-height: 1.42857143;
+    				padding: 6px 12px;
+    				font-size: 1em;
+    				border: 0;
+    				border-radius: 0px 4px 4px 0px;
+    				-webkit-transition: all 500ms ease;
+					-moz-transition: all 500ms ease;
+					-ms-transition: all 500ms ease;
+					-o-transition: all 500ms ease;
+					transition: all 500ms ease;
+    				&:after{
+    					content: "\f138";
+    					font-family: "FontAwesome";
+    					display: inline-block;
+    					margin-left: 10px;
+    				}
+    				&:hover{
+    					color: black;
+    					background-color: white;
+    				}
+    			}
+    		}
+    	}
+    }
+}
+#le-jeu{
+	margin-top:50px;
+	h2{
+		margin-top: 0;
+		text-align: center;
+	}
+	img{
+		max-width: 150px;
+	}
+	.partner{
+		text-align: center;
 	}
 }
